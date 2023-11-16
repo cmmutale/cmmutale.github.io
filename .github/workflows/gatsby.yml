@@ -74,7 +74,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
-        run:
+        run: |
           if ["${{ steps.detect-package-manager.outputs.manager }}" == "npm"]; then
             npm install --legacy-peer-deps
           else
