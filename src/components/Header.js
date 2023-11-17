@@ -28,9 +28,9 @@ const headerStyles = {
 function Header() {
     return (
         <header
-            style={headerStyles}
             className='flex flex-col gap-2 sm:flex-row max-w-4xl mx-auto justify-between items-center
-            my-2 max-sm:mx-2 p-4 bg-white/10 rounded-md'>
+            my-2 max-sm:mx-2 sticky top-2 z-50 bg--blur
+            p-4 bg-white/10 rounded-md'>
             <Logo />
             <nav className=''>
                 <ul className='flex items-center gap-4 text-lg'>

@@ -3,7 +3,7 @@ import Navigation from './Navigation'
 
 function ProfileCard() {
     return (
-        <div>
+        <div className='space-y-4'>
             <h1 className='text-4xl'>Full Stack Developer...</h1>
             <p>
                 Chilu here, I enjoy creating and developing solutions for problems through the

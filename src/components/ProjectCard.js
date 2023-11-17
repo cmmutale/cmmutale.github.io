@@ -5,11 +5,11 @@ import React from 'react'
 
 function ProjectCard(props) {
     return (
-        <div className='flex items-center gap-4 bg-white/10 bg--blur p-2 rounded-md'>
+        <div className='flex items-center gap-4 bg-white/10 bg--blur p-2 rounded-md w-full'>
             {/* <div className='aspect-video basis-1/6'>
                 <img src='/images/hostshare.png' />
             </div> */}
-            <div className='grow'>
+            <div className='grow space-y-4'>
                 <h2 className='text-2xl font-bold my-1'>
                     <Link to={props.link} target='_blank'>{props.title}</Link>
                 </h2>
