@@ -6,21 +6,13 @@ import Navigation from "../components/Navigation"
 import Projects from "../components/sections/Projects"
 import Resume from "../components/sections/Resume"
 
-const pageStyles = {
-    color: "#ffffff",
-    fontFamily: "-apple-system, Roboto, sans-serif, serif",
-    minHeight: "100vh",
-    background: "#1e1e1e",
-}
 
 
 const IndexPage = () => {
     return (
-        <main style={pageStyles} className="px-2 scroll-smooth">
-            <div className="fixed top-0 w-full z-50">
-                <Header />
-            </div>
-            <div className="h-screen flex justify-center items-center p-8">
+        <main className="px-2 scroll-smooth">
+            <Header />
+            <div className="min-h-screen flex justify-center items-center p-8">
                 <section className="container mx-auto">
                     <div className="flex md:flex-row flex-col gap-8 items-center">
                         <div className="md:basis-1/3 basis-1/2 shrink-0 space-y-4 sticky top-0">
@@ -33,13 +25,13 @@ const IndexPage = () => {
                     </div>
                 </section>
             </div>
-            <div id="projects" className="h-screen flex justify-center items-center p-8">
+            <div id="projects" className="min-h-screen flex justify-center items-center p-8">
                 <section className="container mx-auto">
                     <h1 className="text-3xl font-semibold underline text-center my-8">Portfolio</h1>
                     <Projects />
                 </section>
             </div>
-            <div id="resume" className="h-screen flex justify-center items-center p-8">
+            <div id="resume" className="min-h-screen flex justify-center items-center p-8">
                 <section className="container mx-auto">
                     <h1 className="text-3xl font-semibold underline text-center my-4">Work History</h1>
                     <Resume />
