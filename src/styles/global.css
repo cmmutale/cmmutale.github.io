@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    line-height: 1.7;
+}
+
+h1{
+    line-height: 1.5em;
+}
+
+.bg--blur{
+    backdrop-filter: blur(10px);
+}
+
+.tag-list span:last-child{
+    display: none;
+}
