@@ -6,7 +6,7 @@ import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 
 function inspiration() {
     return (
-        <main className="scroll-smooth">
+        <main className="px-2 scroll-smooth">
             <Header />
             <section className='py-8'>
                 <div className='container mx-auto'>
