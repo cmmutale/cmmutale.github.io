@@ -13,6 +13,11 @@ const navLinks = [
         disabled: false
     },
     {
+        title: "Following",
+        link: "/inspiration",
+        disabled: false
+    },
+    {
         title: "Writing",
         link: "#blogs",
         disabled: true

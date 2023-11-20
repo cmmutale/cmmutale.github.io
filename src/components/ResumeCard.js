@@ -5,7 +5,7 @@ function ResumeCard(props) {
         <div>
             <div>
                 <div className='flex justify-between sm:flex-row flex-col'>
-                <h3 className='text-xl font-bold'>{props.position}</h3>
+                <h3 className='text-xl font-semibold'>{props.position}</h3>
                 <div className='text-sm my-2'>
                     {props.from} - {props.to}
                 </div>
