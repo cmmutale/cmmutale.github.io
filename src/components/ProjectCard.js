@@ -1,18 +1,22 @@
 import { Link } from 'gatsby'
 import React from 'react'
-
+import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 
 
 function ProjectCard(props) {
     return (
-        <div className='flex items-center gap-4 bg-white/10 bg--blur p-2 rounded-md w-full'>
+        <div className='flex items-center gap-4 bg-white/10 bg--blur sm:px-4 px-2 py-2 rounded-md w-full'>
             {/* <div className='aspect-video basis-1/6'>
                 <img src='/images/hostshare.png' />
             </div> */}
             <div className='grow space-y-4'>
-                <h2 className='text-2xl font-bold my-1'>
-                    <Link to={props.link} target='_blank'>{props.title}</Link>
-                </h2>
+                <div className='text-2xl my-1 flex justify-between items-center'>
+                    <h2>{props.title}</h2>
+                    <Link 
+                    to={props.link} 
+                    target='_blank'
+                    className='hover:translate-x-2 duration-300 transition-all'><FaArrowRightLong /></Link>
+                </div>
                 <p>{props.desc}</p>
                 <div className='tag-list flex items-center gap-2 bg-white/10 w-fit px-1 rounded-md'>
                     {
