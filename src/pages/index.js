@@ -15,7 +15,7 @@ const IndexPage = () => {
             <div className="min-h-screen flex justify-center items-center p-8">
                 <section className="container mx-auto">
                     <div className="flex md:flex-row flex-col gap-8 items-center">
-                        <div className="md:basis-1/3 basis-1/2 shrink-0 space-y-4 sticky top-0">
+                        <div className="lg:basis-1/3 basis-1/2 shrink-0 space-y-4 sticky top-0">
                             <ProfileCard />
                             <span className="block h-[2px] w-full bg-white/10 shadow-lg"></span>
                             <Navigation />
