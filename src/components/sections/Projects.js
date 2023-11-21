@@ -18,7 +18,7 @@ const projects = [
 ]
 function Projects() {
     return (
-        <div className='max-w-5xl mx-auto space-y-4 w-full'>
+        <div className='space-y-4 w-full'>
             {
                 projects.map((item, index) => {
                     return <ProjectCard
