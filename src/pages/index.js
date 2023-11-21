@@ -25,18 +25,18 @@ const IndexPage = () => {
                     </div>
                 </section>
             </div>
-            <div id="projects" className="min-h-screen flex justify-center items-center p-8">
-                <section className="container mx-auto">
-                    <h1 className="text-3xl font-semibold underline text-center my-8">Portfolio</h1>
+            <section id="projects" className="min-h-screen flex justify-center items-center p-8">
+                <div className="container mx-auto">
+                    <h1 className="text-2xl underline my-8">Portfolio</h1>
                     <Projects />
-                </section>
-            </div>
-            <div id="resume" className="min-h-screen flex justify-center items-center p-8">
-                <section className="container mx-auto">
-                    <h1 className="text-3xl font-semibold underline text-center my-4">Work History</h1>
+                </div>
+            </section>
+            <section id="resume" className="min-h-screen flex justify-center items-center p-8">
+                <div className="container mx-auto">
+                    <h1 className="text-2xl underline my-8">Work History</h1>
                     <Resume />
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
     )
 }

@@ -51,7 +51,7 @@ const WorkExperience = [
 
 function Resume() {
     return (
-        <div className='max-w-5xl mx-auto space-y-12 w-full'>
+        <div className='space-y-12 w-full'>
             {
                 WorkExperience.map((item, index) => {
                     return <ResumeCard
