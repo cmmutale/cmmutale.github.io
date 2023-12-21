@@ -7,11 +7,13 @@ body{
     line-height: 27px;
     background-color: #1e1e1e;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: system-ui,'Open Sans', sans-serif;
+    line-height: 1.7;
 }
 
 h1{
-    line-height: 1.5em;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .bg--blur{
@@ -21,4 +23,16 @@ h1{
 
 .tag-list span:last-child{
     display: none;
+}
+
+section{
+    padding: 5vh 0;
+}
+
+.btn{
+    @apply flex justify-center items-center h-7 px-3 rounded-md outline-none duration-150 transition-all;
+}
+
+.btn:hover{
+    @apply opacity-80 scale-105 duration-150 transition-all;
 }
