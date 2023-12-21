@@ -3,25 +3,29 @@ import React from 'react'
 function ResumeCard(props) {
     return (
         <div>
-            <div>
+            <div className='space-y-1 pb-4'>
                 <div className='flex gap-4 items-center sm:flex-row flex-col'>
-                <h3 className='text-xl font-semibold'>{props.position}</h3>
-                <div className='text-sm my-2'>
-                    ({props.from} - {props.to})
+                    <h2 className='font-semibold'>{props.company}</h2>
                 </div>
-                </div>
-                <p>{props.company} {props.location}</p>
+                <p className='text-sm text-white/70'>{props.position}, {props.from} - {props.to}</p>
             </div>
-            <details>
-            <summary className='text-[14px]'>what I did...</summary>
-            <ul className='text-[14px] space-y-2'>
-                {
-                    props.work.map((item, index) => {
-                        return <li className='list-disc' key={index}>{item}</li>
-                    })
-                }
+            <ul className='space-y-2 pl-4'>
+                    {
+                        props.work.map((item, index) => {
+                            return <li className='' key={index}>{item}</li>
+                        })
+                    }
             </ul>
-            </details>
+            {/* <details>
+                <summary className='text-[14px] cursor-pointer'>what I did...</summary>
+                <ul className='text-[14px] space-y-2'>
+                    {
+                        props.work.map((item, index) => {
+                            return <li className='' key={index}>{item}</li>
+                        })
+                    }
+                </ul>
+            </details> */}
         </div>
     )
 }

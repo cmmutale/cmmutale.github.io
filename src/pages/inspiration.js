@@ -3,24 +3,17 @@ import Header from '../components/Header'
 import InspirationalDevs from '../components/sections/InspirationalDevs'
 import { Link } from 'gatsby'
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
+import Layout from '../components/layout';
 
 function inspiration() {
     return (
-        <main className="px-2 scroll-smooth">
-            <Header />
-            <section className='py-8'>
-                <div className='container mx-auto'>
-                    <div className='my-4'>
-                        <Link
-                            to='/'
-                            className='bg-white/10 py-1 px-2 flex items-center w-fit gap-2 rounded-md'>
-                            <FaArrowLeftLong /> Back Home</Link>
-                    </div>
-                    <p className='text-lg my-4 italic'>Some inspirational developer I follow...</p>
-                    <InspirationalDevs />
-                </div>
+        <Layout>
+            <section>
+                <h1 className='mb-4'>Some developers I find inspirational</h1>
+                <InspirationalDevs />
+                <hr />
             </section>
-        </main>
+        </Layout>
     )
 }
 
