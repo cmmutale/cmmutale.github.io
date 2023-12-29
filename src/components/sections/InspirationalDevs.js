@@ -13,6 +13,10 @@ const Developers = [
     {
         name: "Rafat Pastuszak",
         link: "https://sonnet.io/"
+    },
+    {
+        name: "Yuya Uzu",
+        link: "https://twitter.com/uzu1989"
     }
 ]
 
