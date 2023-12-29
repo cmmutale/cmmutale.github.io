@@ -15,6 +15,12 @@ const projects = [
         desc: 'Keep track of current events that matter to you. Clean minimal and straight to the point news aggregation.',
         tags: ['React', 'Tailwindcss']
     },
+    {
+        title: 'Omnis-zen',
+        link: 'https://omnis-zen.vercel.app/',
+        desc: 'A just for the day todo list. Knock out your tasks with a simple minimal todo list and forget about them the next day.',
+        tags: ['NextJS', 'React', 'Tailwindcss']
+    },
 ]
 function Projects() {
     return (
