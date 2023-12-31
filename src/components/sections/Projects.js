@@ -4,8 +4,8 @@ import ProjectCard from '../ProjectCard';
 
 const projects = [
     {
-        title: 'Hostshare UI',
-        link: 'https://hostshare-ochre.vercel.app/',
+        title: 'Bnbb',
+        link: 'https://guest-suite.vercel.app/',
         desc: 'On this project, I replicated the airbnb build. In this showcase, I utilize several complex components, animations and responsive techniques to make it suitable for all devices',
         tags: ['React', 'Tailwindcss']
     },
