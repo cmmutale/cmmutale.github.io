@@ -17,6 +17,10 @@ const Developers = [
     {
         name: "Yuya Uzu",
         link: "https://twitter.com/uzu1989"
+    },
+    {
+        name: "Amelia Wattenberger",
+        link: "https://wattenberger.com/"
     }
 ]
 
