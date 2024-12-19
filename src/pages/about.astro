@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+        <div class="wrapper">
+            <div class="inner">
+                <div class="wrapper">
+                    <div class="inner">
+                        <p>About Me</p>
+                        <p>
+                            In the mean time, checkout out my <a
+                                href="https://cmmutale.github.io/frontendmentor-challenge/"
+                                class="underline">Frontend Mentor solutions</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    main {
+        min-height: 100vh;
+        min-height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .underline {
+        text-decoration: underline;
+    }
+</style>
