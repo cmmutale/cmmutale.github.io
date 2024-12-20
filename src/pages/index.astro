@@ -1,41 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Masthead from "../components/landing/Masthead.astro";
+import AboutIntro from "../components/landing/AboutIntro.astro";
+import Projects from "../components/landing/Projects.astro";
+import BlogIntro from "../components/landing/BlogIntro.astro";
+import Contact from "../components/landing/Contact.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<div class="wrapper">
-			<div class="inner">
-				<div class="wrapper">
-					<div class="inner">
-						<p>Almost there...</p>
-						<p>
-							In the mean time, checkout out my <a
-								href="https://cmmutale.github.io/frontendmentor-challenge/"
-								class="underline">Frontend Mentor solutions</a>
-						</p>
-						<div>
-							<a href="cmmutale/about">Go to About</a>
-						</div>
-					</div>
-				</div>
+<Layout title="Chilufya Mutale">
+	<section class="wrapper new-section">
+		<div class="container_background"></div>
+		<div class="container_content u-container py-[var(--space-l)]">
+			<div class="textbox">
+				<Masthead />
+				<AboutIntro />
+				<Projects />
+				<BlogIntro />
+				<Contact />
 			</div>
 		</div>
-	</main>
+	</section>
 </Layout>
-
-<style>
-	main {
-		min-height: 100vh;
-		min-height: 100dvh;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.underline {
-		text-decoration: underline;
-	}
-</style>

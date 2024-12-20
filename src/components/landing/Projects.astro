@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import AppScreenshot from "../../images/AppScreenshot.png";
+---
+
+<section class="wrapper relative">
+    <div class="container_background"></div>
+    <div
+        class="container_content u-container flex flex-col md:flex-row gap-[var(--space-s)]"
+    >
+        <!-- Left Column -->
+        <div class="w-full md:w-1/4 p-[var(--space-2xs)]"></div>
+        <!-- Middle Column -->
+        <div class="w-full md:w-1/2 p-[var(--space-2xs)]">
+            <p class="fs-4 font-bold text-center leading-none text-pretty">
+                One of my favorite projects is the <span class="underline"
+                    >AI Essay Writer</span
+                >—think of it as a journalist’s best friend.
+            </p>
+        </div>
+        <!-- Right Column -->
+        <div class="w-full relative md:w-1/4 p-[var(--space-2xs)] items-center">
+            <div class="card-gallery md:absolute">
+                <!-- <div class="card">
+                    <Image
+                        src={AppScreenshot}
+                        alt="#_"
+                        class="h-40 w-full object-cover object-top border-[#333] border-[4px] rounded-2xl shadow-xl"
+                    />
+                    <div class="card-body p-[var(--space-xs)]">
+                        <p class="fs--1 ff-alt font-semibold">
+                            It uses fancy AI (thanks, AWS Lambda and NLP)
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <Image
+                        src={AppScreenshot}
+                        alt="#_"
+                        class="h-40 w-full object-cover object-top border-[#333] border-[4px] rounded-2xl shadow-xl"
+                    />
+                    <div class="card-body p-[var(--space-xs)]">
+                        <p class="fs--1 ff-alt font-semibold">
+                            It uses fancy AI (thanks, AWS Lambda and NLP) to
+                            help organize research, write articles, and
+                            basically save the day when deadlines are looming
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>

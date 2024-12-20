@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import Memoji from "../../images/memoji.png";
+---
+
+<section class="wrapper relative">
+    <div class="container_background"></div>
+    <div
+        class="container_content u-container flex flex-col md:flex-row gap-[var(--space-xs)]"
+    >
+        <!-- Left Column -->
+        <div class="w-full md:w-1/5 p-[var(--space-2xs)]">
+            <div
+                class="p-[var(--space-s)] bg-orange-400 rounded-full w-fit mx-auto"
+            >
+                <Image src={Memoji} alt="#_" class="h-40 w-40" />
+            </div>
+        </div>
+        <!-- Middle Column -->
+        <div class="w-full md:w-7/12 p-[var(--space-2xs)]">
+            <p class="fs-5 font-bold text-center leading-none text-pretty">
+                a full-stack developer who loves bringing ideas to life with
+                clean code and creative solutions.
+            </p>
+        </div>
+        <!-- Right Column -->
+        <div class="w-full md:w-1/5 p-[var(--space-2xs)]"></div>
+    </div>
+</section>
