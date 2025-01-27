@@ -4,6 +4,19 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+/* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1140,16,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+	--fs--2: clamp(0.5628rem, 0.8062rem + -0.3416vw, 0.7378rem);
+	--fs--1: clamp(0.7502rem, 0.9382rem + -0.2639vw, 0.8854rem);
+	--fs-0: clamp(1rem, 1.0869rem + -0.122vw, 1.0625rem);
+	--fs-1: clamp(1.275rem, 1.2524rem + 0.1132vw, 1.333rem);
+	--fs-2: clamp(1.53rem, 1.4337rem + 0.4817vw, 1.7769rem);
+	--fs-3: clamp(1.836rem, 1.6282rem + 1.0392vw, 2.3686rem);
+	--fs-4: clamp(2.2032rem, 1.8309rem + 1.8617vw, 3.1573rem);
+	--fs-5: clamp(2.6438rem, 2.0332rem + 3.0534vw, 4.2087rem);
+}
+
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
@@ -15,6 +28,7 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -22,6 +36,7 @@
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-bold.woff') format('woff');
@@ -29,6 +44,7 @@
 	font-style: normal;
 	font-display: swap;
 }
+
 body {
 	font-family: 'Atkinson', sans-serif;
 	margin: 0;
@@ -42,12 +58,14 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
 }
+
 h1,
 h2,
 h3,
@@ -58,78 +76,99 @@ h6 {
 	color: rgb(var(--black));
 	line-height: 1.2;
 }
+
 h1 {
 	font-size: 3.052em;
 }
+
 h2 {
 	font-size: 2.441em;
 }
+
 h3 {
 	font-size: 1.953em;
 }
+
 h4 {
 	font-size: 1.563em;
 }
+
 h5 {
 	font-size: 1.25em;
 }
+
 strong,
 b {
 	font-weight: 700;
 }
+
 a {
 	color: var(--accent);
 }
+
 a:hover {
 	color: var(--accent);
 }
+
 p {
 	margin-bottom: 1em;
 }
+
 .prose p {
 	margin-bottom: 2em;
 }
+
 textarea {
 	width: 100%;
 	font-size: 16px;
 }
+
 input {
 	font-size: 16px;
 }
+
 table {
 	width: 100%;
 }
+
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
 }
+
 code {
 	padding: 2px 5px;
 	background-color: rgb(var(--gray-light));
 	border-radius: 2px;
 }
+
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
 }
-pre > code {
+
+pre>code {
 	all: unset;
 }
+
 blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0px;
 	font-size: 1.333em;
 }
+
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
+
 	main {
 		padding: 1em;
 	}
