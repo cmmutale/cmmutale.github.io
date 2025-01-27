@@ -3,18 +3,28 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1140,16,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,16,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+.ff-heading {
+  font-family: "Urbanist", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
 
 :root {
-	--fs--2: clamp(0.5628rem, 0.8062rem + -0.3416vw, 0.7378rem);
-	--fs--1: clamp(0.7502rem, 0.9382rem + -0.2639vw, 0.8854rem);
-	--fs-0: clamp(1rem, 1.0869rem + -0.122vw, 1.0625rem);
-	--fs-1: clamp(1.275rem, 1.2524rem + 0.1132vw, 1.333rem);
-	--fs-2: clamp(1.53rem, 1.4337rem + 0.4817vw, 1.7769rem);
-	--fs-3: clamp(1.836rem, 1.6282rem + 1.0392vw, 2.3686rem);
-	--fs-4: clamp(2.2032rem, 1.8309rem + 1.8617vw, 3.1573rem);
-	--fs-5: clamp(2.6438rem, 2.0332rem + 3.0534vw, 4.2087rem);
+	--fs--2: clamp(0.5628rem, 0.7458rem + -0.2569vw, 0.6944rem);
+	--fs--1: clamp(0.7502rem, 0.8658rem + -0.1622vw, 0.8333rem);
+	--fs-0: clamp(1rem, 1rem + 0vw, 1rem);
+	--fs-1: clamp(1.2rem, 1.1481rem + 0.2595vw, 1.333rem);
+	--fs-2: clamp(1.44rem, 1.3085rem + 0.6573vw, 1.7769rem);
+	--fs-3: clamp(1.728rem, 1.478rem + 1.2499vw, 2.3686rem);
+	--fs-4: clamp(2.0736rem, 1.6507rem + 2.1146vw, 3.1573rem);
+	--fs-5: clamp(2.4883rem, 1.8169rem + 3.3569vw, 4.2087rem);
+	--fs-6: clamp(2.986rem, 1.9619rem + 5.1205vw, 5.6102rem);
+	--fs-7: clamp(3.5832rem, 2.0631rem + 7.6005vw, 7.4784rem);
 }
 
 :root {
@@ -27,6 +37,15 @@
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
+	--ff-heading: "Urbanist", serif;
+	--off-white: #f5f5f3;
+	--soft-beige: #eae7dc;
+	--charcoal-grey: #333333;
+	--muted-black: #2D2D2A;
+	--soft-blue: #A3C4BC;
+	--muted-terracotta: #C5A880;
+	--light-cream: #F7F3EB;
+	--dusty-pink: #E8C3B9;
 }
 
 @font-face {
@@ -50,13 +69,14 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	/* background: linear-gradient(var(--gray-gradient)) no-repeat;
+	background-size: 100% 600px; */
+	background-color: var(--off-white);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1.7;
+	color: var(--muted-black);
 }
 
 main {
@@ -66,6 +86,12 @@ main {
 	padding: 3em 1em;
 }
 
+/* TYPOGRAPHY */
+
+.text-xs {
+	font-size: var(--fs--2);
+}
+
 h1,
 h2,
 h3,
@@ -73,24 +99,26 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
+	color: rgb(var(--muted-black));
+	line-height: 1;
+	text-wrap: balance;
+	font-family: var(--ff-heading);
 }
 
 h1 {
-	font-size: 3.052em;
+	font-size: var(--fs-6);
 }
 
 h2 {
-	font-size: 2.441em;
+	font-size: var(--fs-4);
 }
 
 h3 {
-	font-size: 1.953em;
+	font-size: var(--fs-3);
 }
 
 h4 {
-	font-size: 1.563em;
+	font-size: var(--fs-2);
 }
 
 h5 {
@@ -163,6 +191,8 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+
+/* LAYOUT */
 
 @media (max-width: 720px) {
 	body {
