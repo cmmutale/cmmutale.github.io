@@ -139,7 +139,8 @@ a:hover {
 }
 
 p {
-	margin-bottom: 1em;
+	width: 65ch;
+	text-wrap: pretty;
 }
 
 .prose p {
@@ -220,4 +221,20 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+.space-y-1 * ~ * {
+	margin-top: 5px;
+}
+
+.space-y-2 * ~ * {
+	margin-top: 10px;
+}
+
+.space-y-3 * ~ * {
+	margin-top: 20px;
+}
+
+.space-y-4 * ~ * {
+	margin-top: 40px;
 }
