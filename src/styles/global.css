@@ -171,16 +171,8 @@ hr {
 }
 
 .btn {
-	@apply py-3 px-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-0 font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-muted-black disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer;
+	@apply py-[12px] px-[16px] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-0 font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-muted-black disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer;
 
-}
-
-.shiny-text {
-	background: linear-gradient(to top, #000000, #333333, #000000);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2),
-		0px -1px 2px rgba(0, 0, 0, 0.8);
 }
 
 @keyframes smooth-bounce {
