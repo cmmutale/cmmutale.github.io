@@ -9,15 +9,6 @@
 @import "tailwindcss";
 
 
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,16,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
-.ff-heading {
-  font-family: "Urbanist", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-
 :root {
 	--fs--2: clamp(0.5628rem, 0.7458rem + -0.2569vw, 0.6944rem);
 	--fs--1: clamp(0.7502rem, 0.8658rem + -0.1622vw, 0.8333rem);
@@ -83,11 +74,12 @@ body {
 	color: var(--muted-black);
 }
 
+/* LAYOUT */
+
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
+	max-width: 1140px;
 	margin: auto;
-	padding: 3em 1em;
+	padding-top: 2em;
 }
 
 /* TYPOGRAPHY */
@@ -134,16 +126,16 @@ b {
 	font-weight: 700;
 }
 
-a {
+/* a {
 	color: var(--accent);
 }
 
 a:hover {
 	color: var(--accent);
-}
+} */
 
 p {
-	width: 65ch;
+	max-width: 65ch;
 	text-wrap: pretty;
 }
 
@@ -203,10 +195,10 @@ hr {
 	body {
 		font-size: 16px;
 	}
+}
 
-	main {
-		padding: 1em;
-	}
+.u-container {
+	@apply w-full max-w-[1140px] mx-auto px-[5%] sm:px-[8%];
 }
 
 .sr-only {
@@ -225,20 +217,4 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
-}
-
-.space-y-1 * ~ * {
-	margin-top: 5px;
-}
-
-.space-y-2 * ~ * {
-	margin-top: 10px;
-}
-
-.space-y-3 * ~ * {
-	margin-top: 20px;
-}
-
-.space-y-4 * ~ * {
-	margin-top: 40px;
 }
