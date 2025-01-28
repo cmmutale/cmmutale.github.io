@@ -10,35 +10,68 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<div class="u-container space-y-6">
-					<span style="font-size: var(--fs-0);"
-						class="block uppercase"> Full Stack Developer | 
-						React, ASP.NET | 
-						Building PWA<span class="!normal-case">'s</span> and mobile aps</span>
-					<picture class="block">
-						<source
-							media="(min-width:465px)"
-							srcset="/name-logo.png"
-						/>
-						<img
-							src="/name-logo-mobile.png"
-							alt="Flowers"
-							style="width:auto;"
-						/>
-					</picture>
-					<p class="">
-						I'm Chilufya Mutale, a Full Stack Developer with 2 years of
-						experience building engaging, accessible, and visually stunning
-						web applications. I’m driven to deliver innovative,
-						user-friendly solutions that create real value.
-					</p>
+	<body class="bg-off-white">
+		<main class="min-h-screen w-full">
+			<div class="section py-16">
+				<div class="u-container max-w-[1120px] mx-auto">
+					<div class="stack space-y-5">
+						<div
+							class="img-box size-24 rounded-full border-4 border-light-cream shadow-2xl bounce-animation"
+						>
+							<img
+								src="/portrait.jpeg"
+								alt=""
+								srcset=""
+								class="absolute top-0 left-0 w-full h-full object-cover"
+							/>
+						</div>
+						<div class="block">
+							<span class="badge bg-soft-blue text-off-white"
+								>Full Stack Developer</span
+							>
+							|
+							<span class="badge bg-dusty-pink text-off-white"
+								>Working in React and ASP.NET</span
+							>
+							|
+							<span
+								class="badge bg-muted-terracotta text-off-white"
+								>Building PWA's, iOS and Android apps</span
+							>
+						</div>
+
+						<h1 class="text-7 font-semibold block">
+							Chilufya Mutale
+						</h1>
+
+						<p class="block text-1 !max-w-[50ch]">
+							Exploring R&D processes and building innovative, highly technical software solutions that solve real-world problems.
+						</p>
+
+						<div class="button-row space-y-2">
+							<a
+								href="http://www.linkedin.com/in/chilufya-mutale"
+								target="_blank"
+								class="inline-block mr-2"
+							>
+								<button
+									class="btn bg-muted-black hover:bg-muted-black/90 text-off-white"
+								>
+									See my Experience
+								</button>
+							</a>
+							<!-- <div class="font-bold inline">or,</div> -->
+							<a href="http://www.github.com/cmmutale" class="inline-block ml-2">
+								<button
+									class="btn bg-soft-beige hover:bg-soft-beige/90 border-2 border-muted-black text-muted-black"
+								>
+									or, See my Work
+								</button>
+							</a>
+						</div>
+					</div>
 				</div>
-			</section>
+			</div>
 		</main>
-		<Footer />
 	</body>
 </html>
