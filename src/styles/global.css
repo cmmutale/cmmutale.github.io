@@ -171,7 +171,7 @@ hr {
 }
 
 .btn {
-	@apply py-[12px] px-[16px] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-0 font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-muted-black disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer;
+	@apply h-[48px] px-[20px] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-0 font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-muted-black disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer;
 
 }
 
@@ -185,26 +185,31 @@ hr {
 
 	25% {
 		transform: translateY(-10px);
+		box-shadow: none;
 	}
 
 	30% {
 		transform: translateY(-10px);
 		transform: rotate(-5deg);
+		box-shadow: none;
 	}
 
 	35% {
 		transform: translateY(-10px);
 		transform: rotate(5deg);
+		box-shadow: none;
 	}
 
 	40% {
 		transform: translateY(-10px);
 		transform: rotate(-5deg);
+		box-shadow: none;
 	}
 
 	45% {
 		transform: translateY(-10px);
 		transform: rotate(-5deg);
+		box-shadow: none;
 	}
 
 	50% {
@@ -222,4 +227,8 @@ hr {
 
 .bounce-animation:hover {
 	animation-play-state: paused;
+}
+
+.button-row {
+	@apply flex flex-wrap;
 }
