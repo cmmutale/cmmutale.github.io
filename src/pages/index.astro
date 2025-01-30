@@ -1,8 +1,9 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
 ---
 
 <!doctype html>
@@ -11,8 +12,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class="bg-off-white">
-		<main class="min-h-screen w-full">
-			<div class="section py-16 min-h-screen">
+		<main class="min-h-screen w-full scroll-smooth pb-20">
+			<section class="section py-16 min-h-screen">
 				<div class="u-container max-w-[1120px] mx-auto">
 					<div class="stack space-y-5">
 						<div
@@ -26,16 +27,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 							/>
 						</div>
 						<div class="flex gap-2 flex-wrap">
-							<div class="badge bg-soft-blue"
-								>Full Stack Developer</div
-							>
-							<div class="badge bg-dusty-pink"
-								>Working in React and ASP.NET</div
-							>
-							<div
-								class="badge bg-muted-terracotta"
-								>Building PWA's, iOS and Android apps</div
-							>
+							<div class="badge bg-soft-blue">
+								Full Stack Developer
+							</div>
+							<div class="badge bg-dusty-pink">
+								Working in React and ASP.NET
+							</div>
+							<div class="badge bg-muted-terracotta">
+								Building PWA's, iOS and Android apps
+							</div>
 						</div>
 
 						<h1 class="text-7 font-semibold block">
@@ -43,7 +43,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 						</h1>
 
 						<p class="block text-1 !max-w-[50ch]">
-							Exploring R&D processes and building innovative, highly technical software solutions that solve real-world problems.
+							Exploring R&D processes and building innovative,
+							highly technical software solutions that solve
+							real-world problems.
 						</p>
 
 						<div class="button-row flex gap-3">
@@ -59,7 +61,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 								</button>
 							</a>
 							<!-- <div class="font-bold inline">or,</div> -->
-							<a href="http://www.github.com/cmmutale" class="block">
+							<a href="#projects" class="block">
 								<button
 									class="btn bg-slate-200 hover:bg-slate-200/90 text-black"
 								>
@@ -69,7 +71,75 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<section id="projects" class="py-12">
+				<div class="wrapper u-container max-w-[1120px] mx-auto">
+					<div class="stack">
+						<h2 class="text-6 font-medium">Projects</h2>
+					</div>
+					<div class="card-gallery mt-20 grid md:grid-cols-2 gap-10">
+						{
+							projects.map((project) => {
+								// check if there is a displayImage
+								if (project.data.displayImage) {
+									return (
+										<div
+											class={`card space-y-4 relative ${project.data.featured && "md:col-span-2"}`}
+										>
+											<div class="card-header relative">
+												<img
+													src={
+														project.data
+															.displayImage
+													}
+													alt=""
+													class="object-cover w-96 aspect-video object-top border-2 border-soft-blue"
+												/>
+												<a
+													href={`/projects/${project.id}`}
+													class="absolute top-0 left-0 w-full h-full"
+												/>
+											</div>
+
+											<div class="card-content space-y-2">
+												<h3 class="text-2">
+													{project.data.title}
+												</h3>
+												<p>
+													{project.data.description}
+												</p>
+											</div>
+										</div>
+									);
+								} else {
+									return (
+										<div
+											class={`card space-y-4 relative ${project.data.featured && "md:col-span-2"}`}
+										>
+											<div class="card-content space-y-2">
+												<a
+													href={`/projects/${project.id}`}
+													class="block"
+												>
+													<h3
+														class={`text-3 font-semibold hover:underline ${project.data.featured && "md:col-span-2 md:text-4"}`}
+													>
+														{project.data.title}
+													</h3>
+												</a>
+												<p>
+													{project.data.description}
+												</p>
+											</div>
+										</div>
+									);
+								}
+							})
+						}
+					</div>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>

@@ -8,8 +8,10 @@
 
 @import "tailwindcss";
 
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.333,1240,16,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1120,16,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+html {
+	scroll-behavior: smooth;
+}
+
 
 @theme {
 	--color-off-white: #f5f5f3;
@@ -172,7 +174,10 @@ hr {
 
 .btn {
 	@apply h-[48px] px-[20px] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-0 font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-muted-black disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer;
+}
 
+.btn--sm {
+	@apply h-[40px] text-sm;
 }
 
 @keyframes smooth-bounce {

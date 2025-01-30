@@ -1,0 +1,55 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+type Props = CollectionEntry<"projects">["data"];
+
+const { title, description, subTitle, displayImage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={`${title} | Chilu's blog`} description={description} />
+    </head>
+    <body>
+        <main class="max-w-6xl mx-auto space-y-10 p-[2.5%] sm:p-10">
+            <div>
+                <a href="/#projects" target="_self" class="block">
+                    <button
+                        class="btn btn--sm bg-slate-200 hover:bg-slate-200/90 text-black"
+                    >
+                        Back home
+                    </button>
+                </a>
+            </div>
+            <!-- <div class="hero-image">
+                {
+                    displayImage && (
+                        <img
+                            src={displayImage}
+                            class="object-cover max-h-[400px]"
+                            alt=""
+                        />
+                    )
+                }
+            </div> -->
+
+            <div class="content">
+                <hr />
+
+                <div class="space-y-3">
+                    <h1 class="text-6 font-semibold">{title}</h1>
+                    {subTitle && <h3 class="text-3 font-light">{subTitle}</h3>}
+                </div>
+
+                <hr class="bg-soft-blue h-[1px] w-full mt-10" />
+
+                <div class="mt-10">
+                    <slot />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
