@@ -2,8 +2,11 @@
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
+import Footer from "../components/Footer.astro";
 
-const projects = await getCollection("projects");
+const projects = (await getCollection("projects")).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <!doctype html>
@@ -14,7 +17,7 @@ const projects = await getCollection("projects");
 	<body class="bg-off-white">
 		<main class="min-h-screen w-full scroll-smooth pb-20">
 			<section class="section py-16 min-h-screen">
-				<div class="u-container max-w-[1120px] mx-auto">
+				<div class="u-container w-full max-w-6xl mx-auto">
 					<div class="stack space-y-5">
 						<div
 							class="img-box size-24 rounded-3xl border-2 border-slate-950 shadow-2xl bounce-animation"
@@ -141,5 +144,6 @@ const projects = await getCollection("projects");
 				</div>
 			</section>
 		</main>
+		<Footer />
 	</body>
 </html>
