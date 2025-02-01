@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Chilu\'s blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const SITE_REPO = 'https://github.com/cmmutale/cmmutale.github.io'

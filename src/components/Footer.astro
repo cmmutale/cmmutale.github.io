@@ -1,5 +1,6 @@
 ---
 const today = new Date();
+import { SITE_REPO } from "../consts";
 ---
 
 <footer class="flex flex-col items-center bg-soft-beige">
@@ -17,6 +18,11 @@ const today = new Date();
 				href="https://mdxjs.com/"
 				class="underline"
 				target="_blank">mdx</a
+			>
+		</p>
+		<p>
+			checkout the <a href={SITE_REPO} class="underline" target="_blank"
+				>repo</a
 			>
 		</p>
 	</div>
