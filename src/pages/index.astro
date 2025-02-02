@@ -30,13 +30,13 @@ const projects = (await getCollection("projects")).sort(
 							/>
 						</div>
 						<div class="flex gap-2 flex-wrap">
-							<div class="badge bg-soft-blue">
+							<div class="badge bg-primary text-primary-foreground shadow hover:bg-primary/90">
 								Full Stack Developer
 							</div>
-							<div class="badge bg-dusty-pink">
+							<div class="badge bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80">
 								Working in React and ASP.NET
 							</div>
-							<div class="badge bg-muted-terracotta">
+							<div class="badge bg-accent text-accent-foreground shadow-sm hover:bg-accent/80">
 								Building PWA's, iOS and Android apps
 							</div>
 						</div>
@@ -58,7 +58,7 @@ const projects = (await getCollection("projects")).sort(
 								class="block"
 							>
 								<button
-									class="btn bg-slate-950 hover:bg-slate-950/90 text-off-white"
+									class="btn bg-primary text-primary-foreground shadow hover:bg-primary/90"
 								>
 									See my Experience
 								</button>
@@ -66,7 +66,7 @@ const projects = (await getCollection("projects")).sort(
 							<!-- <div class="font-bold inline">or,</div> -->
 							<a href="#projects" class="block">
 								<button
-									class="btn bg-slate-200 hover:bg-slate-200/90 text-black"
+									class="btn bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80"
 								>
 									or, See my Work
 								</button>
@@ -97,7 +97,7 @@ const projects = (await getCollection("projects")).sort(
 															.displayImage
 													}
 													alt=""
-													class="object-cover w-96 aspect-video object-top border-2 border-soft-blue"
+													class="object-cover w-96 aspect-video object-top border-2 border-border"
 												/>
 												<a
 													href={`/projects/${project.id}`}
