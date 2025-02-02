@@ -18,37 +18,50 @@ const tagsArray = tags?.split(",");
         <BaseHead title={`${title} | Chilu's blog`} description={description} />
     </head>
     <body>
-        <main class="max-w-6xl mx-auto space-y-10 p-[2.5%] sm:p-10">
-            <div>
-                <a href="/#projects" target="_self" class="block">
-                    <button
-                        class="btn btn--sm bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80"
-                    >
-                        Back home
-                    </button>
-                </a>
-            </div>
-
-            <div class="content">
-                <div class="space-y-3">
-                    {
-                        tagsArray && (
-                            <div class="flex flex-wrap gap-2">
-                                {tagsArray.map((tag) => (
-                                    <div class="badge border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground">{tag}</div>
-                                ))}
-                            </div>
-                        )
-                    }
-                    <h1 class="text-6 font-semibold">{title}</h1>
-                    {subTitle && <h3 class="text-3 font-light">{subTitle}</h3>}
+        <main class="w-full scroll-smooth">
+            <div class="stack space-y-10">
+                <div class="header">
+                    <div class="u-container pt-10">
+                        <a href="/#projects" target="_self" class="block">
+                            <button
+                                class="btn btn--sm bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80"
+                            >
+                                Back home
+                            </button>
+                        </a>
+                    </div>
                 </div>
+                <article class="u-container pb-10 border-border border-b mb-10">
+                    <div class="content">
+                        <div class="space-y-3">
+                            {
+                                tagsArray && (
+                                    <div class="flex flex-wrap gap-2">
+                                        {tagsArray.map((tag) => (
+                                            <div class="badge border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground">
+                                                {tag}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )
+                            }
+                            <h1 class="text-6 font-semibold">{title}</h1>
+                            {
+                                subTitle && (
+                                    <h3 class="text-3 font-light">
+                                        {subTitle}
+                                    </h3>
+                                )
+                            }
+                        </div>
 
-                <hr class="bg-border h-[1px] w-full mt-10" />
+                        <hr class="bg-border h-[1px] w-full mt-10" />
 
-                <div class="mt-10">
-                    <slot />
-                </div>
+                        <div class="mt-10">
+                            <slot />
+                        </div>
+                    </div>
+                </article>
             </div>
         </main>
         <Footer />

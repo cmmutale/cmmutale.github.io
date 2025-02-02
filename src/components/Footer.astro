@@ -5,28 +5,29 @@ import { SITE_REPO } from "../consts";
 
 <footer class="flex flex-col items-center bg-secondary">
 	<!-- &copy; {today.getFullYear()} Chilufya Mutale. All rights reserved. -->
-	<div class="wrapper w-full max-w-6xl mx-auto py-[80px] px-[2.5%] space-y-5">
-		<p>
-			built with <a
-				href="https://astro.build/"
-				class="underline"
-				target="_blank">astro</a
-			>
-		</p>
-		<p>
-			blog written with <a
-				href="https://mdxjs.com/"
-				class="underline"
-				target="_blank">mdx</a
-			>
-		</p>
-		<p>
-			checkout the <a href={SITE_REPO} class="underline" target="_blank"
-				>repo</a
-			>
-		</p>
+	<div class="u-container py-[80px]">
+		<div class="stack space-y-5">
+			<p>
+				built with <a
+					href="https://astro.build/"
+					class="underline"
+					target="_blank">astro</a
+				>
+			</p>
+			<p>
+				blog written with <a
+					href="https://mdxjs.com/"
+					class="underline"
+					target="_blank">mdx</a
+				>
+			</p>
+			<p>
+				checkout the <a
+					href={SITE_REPO}
+					class="underline"
+					target="_blank">repo</a
+				>
+			</p>
+		</div>
 	</div>
-	<!-- <div class="w-full relative h-[200px]">
-			<img src="/footer-img.png" alt="" class="w-full absolute top-0 left-0 h-full">
-		</div> -->
 </footer>
