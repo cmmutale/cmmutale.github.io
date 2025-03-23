@@ -16,7 +16,7 @@ const projects = (await getCollection("projects")).sort(
 	</head>
 	<body class="bg-off-white">
 		<main class="min-h-screen w-full scroll-smooth pb-20">
-			<section class="section py-16 min-h-screen">
+			<section class="section py-16">
 				<div class="u-container w-full max-w-6xl mx-auto">
 					<div class="stack space-y-5">
 						<div
@@ -30,13 +30,19 @@ const projects = (await getCollection("projects")).sort(
 							/>
 						</div>
 						<div class="flex gap-2 flex-wrap">
-							<div class="badge bg-primary text-primary-foreground shadow hover:bg-primary/90">
+							<div
+								class="badge bg-primary text-primary-foreground shadow hover:bg-primary/90"
+							>
 								Full Stack Developer
 							</div>
-							<div class="badge bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80">
+							<div
+								class="badge bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80"
+							>
 								Working in React and ASP.NET
 							</div>
-							<div class="badge bg-accent text-accent-foreground shadow-sm hover:bg-accent/80">
+							<div
+								class="badge bg-accent text-accent-foreground shadow-sm hover:bg-accent/80"
+							>
 								Building PWA's, iOS and Android apps
 							</div>
 						</div>
