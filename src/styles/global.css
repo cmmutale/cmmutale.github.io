@@ -1,17 +1,4 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import "tailwindcss";
-
-html {
-	scroll-behavior: smooth;
-}
-
 
 @theme {
 	--color-background: hsl(0 0% 100%);
@@ -44,15 +31,19 @@ html {
 	--text-5: clamp(3.0518rem, 2.589rem + 2.3139vw, 4.2087rem);
 	--text-6: clamp(3.8147rem, 3.0965rem + 3.5911vw, 5.6102rem);
 	--text-7: clamp(4.7684rem, 3.6843rem + 5.4201vw, 7.4784rem);
+}
 
-	--font-heading: 'Urbanist', sans-serif;
-	--font-body: 'Urbanist', sans-serif;
+html {
+	scroll-behavior: smooth;
 }
 
 body {
-	@apply font-heading bg-background text-foreground leading-snug;
+	@apply bg-background text-foreground leading-snug;
 }
 
+body {
+	font-family: 'Inter Variable', sans-serif;
+}
 
 /* TYPOGRAPHY */
 
@@ -62,6 +53,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: 'Inter Tight Variable', sans-serif;
 	line-height: 1;
 	text-wrap: balance;
 }

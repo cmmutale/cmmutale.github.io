@@ -3,6 +3,8 @@ import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 import Footer from "../components/Footer.astro";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/inter-tight";
 
 const projects = (await getCollection("projects")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -19,35 +21,41 @@ const projects = (await getCollection("projects")).sort(
 			<section class="section py-16">
 				<div class="u-container w-full max-w-6xl mx-auto">
 					<div class="stack space-y-5">
-						<div
-							class="img-box size-24 rounded-3xl border-2 border-slate-950 shadow-2xl bounce-animation"
-						>
-							<img
-								src="/portrait.jpeg"
-								alt=""
-								srcset=""
-								class="absolute top-0 left-0 w-full h-full object-cover"
-							/>
-						</div>
-						<div class="flex gap-2 flex-wrap">
+						<div class="flex flex-wrap gap-4">
 							<div
-								class="badge bg-primary text-primary-foreground shadow hover:bg-primary/90"
+								class="img-box size-24 rounded-3xl border-2
+							border-slate-950 shadow-2xl bounce-animation"
 							>
-								Full Stack Developer
+								<img
+									src="/portrait.jpeg"
+									alt=""
+									srcset=""
+									class="absolute top-0 left-0 w-full h-full object-cover"
+								/>
 							</div>
-							<div
-								class="badge bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80"
-							>
-								Working in React and ASP.NET
-							</div>
-							<div
-								class="badge bg-accent text-accent-foreground shadow-sm hover:bg-accent/80"
-							>
-								Building PWA's, iOS and Android apps
+							<div class="flex flex-col items-start gap-2">
+								<div
+									class="badge bg-primary text-primary-foreground
+								shadow hover:bg-primary/90"
+								>
+									Full Stack Developer
+								</div>
+								<div
+									class="badge bg-secondary text-secondary-foreground
+								shadow-sm hover:bg-secondary/80"
+								>
+									Working with React, ASP.NET
+								</div>
+								<div
+									class="badge bg-accent text-accent-foreground
+								shadow-sm hover:bg-accent/80"
+								>
+									Building PWA's, iOS and Android apps
+								</div>
 							</div>
 						</div>
 
-						<h1 class="text-7 font-semibold block">
+						<h1 class="text-7 font-semibold block mt-24">
 							Chilufya Mutale
 						</h1>
 
@@ -57,32 +65,32 @@ const projects = (await getCollection("projects")).sort(
 							real-world problems.
 						</p>
 
-						<div class="button-row flex gap-3">
+						<div class="button-row flex gap-6 mt-12">
 							<a
 								href="http://www.linkedin.com/in/chilufya-mutale"
 								target="_blank"
 								class="block"
 							>
-								<button
-									class="btn bg-primary text-primary-foreground shadow hover:bg-primary/90"
+								<span class="font-medium underline text-0 hover:text-foreground/80"
+									>LinkedIn</span
 								>
-									See my Experience
-								</button>
 							</a>
-							<!-- <div class="font-bold inline">or,</div> -->
-							<a href="#projects" class="block">
-								<button
-									class="btn bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80"
-								>
-									or, See my Work
-								</button>
-							</a>
+							<a
+							href="http://www.github.com/cmmutale/"
+							target="_blank"
+							class="block"
+						>
+							<span class="font-medium underline text-0 hover:text-foreground/80"
+								>Github</span
+							>
+						</a>
+
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section id="projects" class="py-12">
+			<!-- <section id="projects" class="py-12">
 				<div class="wrapper u-container max-w-[1120px] mx-auto">
 					<div class="stack">
 						<h2 class="text-6 font-medium">Projects</h2>
@@ -148,7 +156,7 @@ const projects = (await getCollection("projects")).sort(
 						}
 					</div>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		<Footer />
 	</body>
